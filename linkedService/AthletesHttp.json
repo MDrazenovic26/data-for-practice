@@ -1,0 +1,12 @@
+{
+	"name": "AthletesHttp",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://valconbusinessdevelopment.sharepoint.com/sites/PMInternals/Shared%20Documents/Athletes.xlsx",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
