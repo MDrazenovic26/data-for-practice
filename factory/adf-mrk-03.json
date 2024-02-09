@@ -1,0 +1,9 @@
+{
+	"name": "adf-mrk-03",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4b8ed51f-aa12-4362-b6d1-c738ae6b9679",
+		"tenantId": "239614cb-8cd3-4e87-8036-16413ae03cfc"
+	}
+}
