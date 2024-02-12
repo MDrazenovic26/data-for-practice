@@ -13,6 +13,10 @@
 				},
 				"secretName": "LocalDBPass"
 			}
+		},
+		"connectVia": {
+			"referenceName": "SHIR2",
+			"type": "IntegrationRuntimeReference"
 		}
 	}
 }
