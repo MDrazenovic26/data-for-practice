@@ -1,0 +1,22 @@
+{
+	"name": "onpremisesqlserver",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Data Source=DESKTOP-DB615UA;Initial Catalog=AdventureWorksLT2022;User ID=mirko",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "onpremiseskeyvalut",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "LocalDBPass"
+			}
+		},
+		"connectVia": {
+			"referenceName": "SHIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
