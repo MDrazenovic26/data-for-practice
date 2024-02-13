@@ -71,6 +71,16 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/SHIR2')]",
+			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"type": "SelfHosted",
+				"typeProperties": {}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/Address_parquet')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -153,12 +163,12 @@
 					}
 				},
 				"connectVia": {
-					"referenceName": "SHIR",
+					"referenceName": "SHIR2",
 					"type": "IntegrationRuntimeReference"
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/SHIR')]",
+				"[concat(variables('factoryId'), '/integrationRuntimes/SHIR2')]",
 				"[concat(variables('factoryId'), '/linkedServices/onpremiseskeyvalut')]"
 			]
 		},
@@ -326,7 +336,7 @@
 										"source": {
 											"type": "SqlServerSource",
 											"sqlReaderQuery": {
-												"value": "@concat('SELECT * FROM', item().SchemaName, '.' , item().TableName)",
+												"value": "@concat('SELECT * FROM  ', item().SchemaName, '.' , item().TableName)",
 												"type": "Expression"
 											},
 											"queryTimeout": "02:00:00",
