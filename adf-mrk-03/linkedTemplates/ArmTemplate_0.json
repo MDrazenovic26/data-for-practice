@@ -64,18 +64,17 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/SHIR')]",
+			"name": "[concat(parameters('factoryName'), '/SHIR2')]",
 			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"type": "SelfHosted",
-				"description": "used to connect to local sql server",
 				"typeProperties": {}
 			},
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/SHIR2')]",
+			"name": "[concat(parameters('factoryName'), '/SHIR3')]",
 			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -191,12 +190,12 @@
 					}
 				},
 				"connectVia": {
-					"referenceName": "SHIR2",
+					"referenceName": "SHIR3",
 					"type": "IntegrationRuntimeReference"
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/SHIR2')]",
+				"[concat(variables('factoryId'), '/integrationRuntimes/SHIR3')]",
 				"[concat(variables('factoryId'), '/linkedServices/onpremiseskeyvalut')]"
 			]
 		},
