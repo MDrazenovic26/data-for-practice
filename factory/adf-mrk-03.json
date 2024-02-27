@@ -1,5 +1,13 @@
 {
 	"name": "adf-mrk-03",
+	"properties": {
+		"globalParameters": {
+			"GL_KV_NAME": {
+				"type": "string",
+				"value": "kv-mrk-03"
+			}
+		}
+	},
 	"location": "westeurope",
 	"identity": {
 		"type": "SystemAssigned",
